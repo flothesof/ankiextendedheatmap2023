@@ -5,9 +5,7 @@ import aqt
 from aqt import mw
 from aqt.deckbrowser import DeckBrowser
 from aqt.overview import Overview
-from aqt.qt import QWidget
 from aqt.stats import DeckStats
-from aqt.qt import QDialog
 
 # hmd stands for heat map data
 from .config import hmd
