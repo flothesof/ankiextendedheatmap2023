@@ -1,4 +1,4 @@
-<h1 align = "center"> Rating Heatmap For Anki 2.1 (Updated November 2023)</h1>
+<h1 align = "center">Rating Heatmap For Anki 2.1 (Updated November 2023)</h1>
 
 <img width="1140" alt="Screen Shot 2021-06-12 at 7 36 26 PM" src="https://user-images.githubusercontent.com/46613983/121792691-853fc480-cbb5-11eb-96d2-9374affd124c.png">
 
@@ -17,7 +17,7 @@ Inspired by <a href = "https://github.com/glutanimate/review-heatmap" target="_b
 
 <hr>
 
-DOWNLOAD this addon <a href = "https://ankiweb.net/shared/info/2011818092" target="_blank"> here </a> for Anki Versions <strong> 2.1.65+ </strong>
+DOWNLOAD this addon <a href = "https://ankiweb.net/shared/info/243020312" target="_blank"> here </a> for Anki Versions <strong> 2.1.65+ </strong>
 
 <hr>
 
@@ -37,7 +37,8 @@ By having the context of when you rated each card, you can hone in on the much m
 
 <h3> Note </h3>
 
-This addon is a fork of <a href = "https://ankiweb.net/shared/info/2011818092" target="_blank"> the original addon</a> and was updated to get it running in Anki 2.1.65+.
+This addon is a fork of <a href = "https://ankiweb.net/shared/info/2011818092" target="_blank"> the original addon</a> and was updated to get it running in Anki 2.1.65+ by removing calls to the Qt resource system.
+All credits go to the original author.
 
 The sources are on Github: [https://github.com/flothesof/ankiextendedheatmap2023](https://github.com/flothesof/ankiextendedheatmap2023).
 
