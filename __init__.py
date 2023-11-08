@@ -152,8 +152,8 @@ html_heatmap_template = """
         <!-- Put this into Container to visualize border -> border-style: solid; border-color: red; border-inline-width: 5px; #999-->
         <div id="cal-heatmapzzzz" style = "margin-right: 3em; margin-top: 3em;"> 
              <div style = "margin-bottom: 20px;">    
-                <button onclick="more_cal.previous();" style="margin-bottom: 5px;" class="more_heatmap">{svg_left_arrow}</button>    
-                <button onclick="more_cal.next();" style="margin-bottom: 5px;" class="more_heatmap">{svg_right_arrow}</button>    
+                <button onclick="more_cal.previous();" style="margin-bottom: 5px;" class="more_heatmap"><div style="height: 10px;">{svg_left_arrow}</div></button>    
+                <button onclick="more_cal.next();" style="margin-bottom: 5px;" class="more_heatmap"><div style="height: 10px;">{svg_right_arrow}</div></button>    
              </div>     
         </div>   
         <div class="jumbotron" style = " width: 450px; color: #999; background-color: #222222; border-radius: 10px;">
