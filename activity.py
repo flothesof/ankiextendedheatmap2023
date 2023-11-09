@@ -1,15 +1,12 @@
 from __future__ import (absolute_import, division,
                         print_function, unicode_literals)
-import aqt
 
 import datetime
-from datetime import timedelta, date, datetime
+from datetime import timedelta, datetime
 
 from .platform import ANKI21
-from aqt import mw
 
 # all codes includes repeated presses AND learn/relearns
-
 legend_factors = (0.125, 0.25, 0.5, 0.75, 1, 1.25, 1.5, 2, 4)
 
 
@@ -53,29 +50,6 @@ class Activity(object):
 
             cmd = intial_cmd.format(offset=offset, ease=reviewCode[review_type], two_months=two_months_ago_in_unix)
 
-        # Edit 2
-        # Turns out that https://github.com/ankidroid/Anki-Android/wiki/Database-Structure is too old. They added a hard rating for new cards too so the ease values are way simplier. :(
-
-        # Edit 1
-        # https://github.com/ankidroid/Anki-Android/wiki/Database-Structure
-        # See Database-Structure for explanation
-
-        # if (review_type == 'Hard'):
-        #     hard_request = "ease = '2'"
-        #     # "(ease = '2' AND type = '1') OR (ease = '2' AND type = '0') "
-        #     cmd = intial_cmd.format(offset, hard_request)
-        # elif (review_type == 'Easy'):
-        #     easy_request = "ease = '4'"
-        #     # (ease = '3' AND (type = '0' OR type = '2')) OR(ease='4' AND type = '1')
-        #     cmd = intial_cmd.format(offset, easy_request)
-        # elif (review_type == 'Good'):
-        #     good_request = "ease = '3'"
-        #     # "(ease = '3' AND (type = '1')) OR (ease = '2' AND (type = '0' OR type = '2'))"
-        #     cmd = intial_cmd.format(offset, good_request)
-        # else:
-        #     again_request = "ease = '1'"
-        #     cmd =  intial_cmd.format(offset, again_request)
-
         raw_data = self.col.db.all(cmd)
         return raw_data
 
@@ -96,12 +70,9 @@ class Activity(object):
         """
         Return daily scheduling cutoff time in hours
         """
-
         if ANKI21 and self.col.sched_ver() == 2:
-            # aqt.utils.showText(str(self.col.conf.get("rollover", 4)))
             return self.col.conf.get("rollover", 4)
-        start_date = datetime.fromtimestamp(selfmore.col.crt)
-        # aqt.utils.showText(str(datetime.datetime.fromtimestamp(self.col.crt).hour))
+        start_date = datetime.fromtimestamp(self.col.crt)
         return start_date.hour
 
     def _convertToUnix(self, dt):
