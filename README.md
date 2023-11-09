@@ -35,7 +35,7 @@ Oh? It was after that derivatives test on <strong> Friday </strong> that I rated
 
 By having the context of when you rated each card, you can hone in on the much more important "why" you rated it that way. 
 
-<h3> Note </h3>
+<h3> NOTE </h3>
 
 This addon is a fork of <a href = "https://ankiweb.net/shared/info/2011818092" target="_blank"> the original addon</a> and was updated to get it running in Anki 2.1.65+ by removing calls to the Qt resource system.
 All credits go to the original author.
